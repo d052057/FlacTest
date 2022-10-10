@@ -4,18 +4,23 @@ Note: Please create a directory/folder in c: drive , "c:\medias\musics\got".
 <br />
       Please copy A.flac to A.flac and A.flc to the above directory (c:\medias\musics\got)
 </p>
-<h2>Play flac from /assets/local/A.flac - local directory</h2>
+<h2>Play flac from /assets/local/A.flac - local directory (Work in VS2022 Test mode but not in Prod)</h2>
 <audio controls>
   <source src="/assets/local/A.flac" type="audio/flac">
   Your browser does not support the audio element.
 </audio>
-<h2>Play flac from /assets/medias/musics/got/A.fla - virtual directory</h2>
+<h2>Play fla from /assets/medias/musics/got/a.fla - from fileserver directory (WORKING)</h2>
 <audio controls>
-  <source src="/assets/medias/musics/got/A.fla" type="audio/flac">
+  <source src="/assets/medias/musics/got/a.fla" type="audio/flac">
   Your browser does not support the audio element.
 </audio>
-<h2 style="color: red">Play flac from /assets/medias/musics/got/A.flac - virtual directory (Not Working)</h2>
+<h2 style="color: red">Play flac from /assets/medias/musics/got/a.flac - from fileserver (Not Working)</h2>
 <audio controls>
-  <source src="/assets/medias/musics/got/A.flac" type="audio/flac">
+  <source src="/assets/medias/musics/got/a.flac" type="audio/flac">
   Your browser does not support the audio element.
 </audio>
+<!--<system.webServer>
+  <staticContent>
+    <mimeMap fileExtension=".flac" mimeType="audio/x-flac" />
+  </staticContent>
+</system.webServer>-->

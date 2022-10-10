@@ -30,7 +30,7 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles(new StaticFileOptions()
 {
     //FileProvider = new PhysicalFileProvider(@"c:/medias"),
-    //RequestPath = new PathString("/assets/medias")  
+    //RequestPath = new PathString("/assets/medias")
 });
 app.UseFileServer(new FileServerOptions()
 {
